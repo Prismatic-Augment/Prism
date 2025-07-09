@@ -14,7 +14,11 @@
     "sidePanel",
     "bookmarks",
     "history",
-    "settingsPrivate"
+    "settingsPrivate",
+    "passwords",
+    "notifications",
+    "webNavigation",
+    "contextMenus"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -52,6 +56,16 @@
       ],
       "run_at": "document_start",
       "all_frames": true
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "passwordContentScript.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
     }
   ],
   "icons": {
